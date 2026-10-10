@@ -45,7 +45,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASS }}
 
       - name: Subir ambiente de teste
-        run: docker compose up -d
+        run: docker compose up --build -d
 
       - name: Rodar testes dentro do Container
         run: docker compose exec -T calculadora-app ping -c 1 servico-vizinho
