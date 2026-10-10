@@ -2,8 +2,11 @@ services:
 
   calculadora-app:
     build: .
-    image: grazieladilany/my-project-cicd:latest
+    image: ${DOCKER_USER}/my-project-cicd:latest
+    container_name: python_app_container
+    command: sleep infinity
 
   servico-vizinho:
     image: alpine
+    container_name: servico_vizinho_container
     command: sleep infinity
