@@ -1,0 +1,9 @@
+services:
+
+  calculadora-app:
+    build: .
+    image: grazieladilany/my-project-cicd:latest
+
+  servico-vizinho:
+    image: alpine
+    command: sleep infinity
